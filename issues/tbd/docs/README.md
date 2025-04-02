@@ -1,9 +1,10 @@
 ## Interfaces
 
-- [SignOut](interfaces/SignOut.md)
+- [ExampleInterface](interfaces/ExampleInterface.md)
 
 ## Type Aliases
 
+- [Params](type-aliases/Params.md)
 - [Return](type-aliases/Return.md)
 
 ## Functions

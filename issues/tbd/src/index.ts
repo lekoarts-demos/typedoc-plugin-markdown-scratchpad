@@ -1,33 +1,50 @@
 /**
+ * Example of an interface with optional stuff
+ */
+export interface ExampleInterface {
+  /**
+   * Some description
+   */
+  foo?: string;
+  /**
+   * Some other description
+   */
+  bar?: number;
+}
+
+/**
  * @inline
  */
-export interface SignOut {
-  (options?: any): Promise<void>;
-  (signOutCallback?: any, options?: any): Promise<void>;
+export type Params = {
+  initialState?: Record<string, any>;
 }
 
 /**
  * Some description
  * @inline
  */
-export type Return = {
+export type Return<T extends string = 'example'> = {
   /**
    * Some text
    */
-  signOut: SignOut;
+  isLoaded: boolean;
+  /**
+   * Some other text
+   */
+  user?: Record<string, any>;
+  /**
+   * Other return value
+   */
+  data?: T;
 }
 
 /**
  * Example description
  */
-export function useExample(): Return {
+export function useExample(params: Params): Return {
   return {
-    signOut: async (signOutCallback?: any, options?: any): Promise<void> => {
-      // Example implementation
-      if (signOutCallback) {
-        signOutCallback();
-      }
-      console.log('Sign out successful', options);
-    },
+    isLoaded: true,
+    user: params.initialState,
+    data: 'example',
   }
 }

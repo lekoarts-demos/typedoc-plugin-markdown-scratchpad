@@ -1,6 +1,13 @@
-> **useExample**(): `object`
+> **useExample**(`params`): `object`
 
 Example description
+
+## Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `params` | \{ `initialState`: `Record`\<`string`, `any`\>; \} |
+| `params.initialState`? | `Record`\<`string`, `any`\> |
 
 ## Returns
 
@@ -8,4 +15,6 @@ Example description
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `signOut` | (`options`?) => `Promise`\<`void`\>(`signOutCallback`?, `options`?) => `Promise`\<`void`\> | Some text |
+| `data?` | `"example"` | Other return value |
+| `isLoaded` | `boolean` | Some text |
+| `user?` | `Record`\<`string`, `any`\> | Some other text |
