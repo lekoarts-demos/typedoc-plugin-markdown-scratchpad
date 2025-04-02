@@ -15,6 +15,6 @@ Example description
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `data?` | `"example"` | Other return value |
+| `data`? | `"example"` | Other return value |
 | `isLoaded` | `boolean` | Some text |
-| `user?` | `Record`\<`string`, `any`\> | Some other text |
+| `user`? | `Record`\<`string`, `any`\> | Some other text |

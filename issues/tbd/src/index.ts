@@ -1,4 +1,14 @@
 /**
+ * Foobar
+ */
+export type Stuff<T> = T & {
+  /**
+   * If `true`, the previous data will be kept in the cache until new data is fetched. Defaults to `false`.
+   */
+  keepPreviousData?: boolean;
+};
+
+/**
  * Example of an interface with optional stuff
  */
 export interface ExampleInterface {
@@ -10,6 +20,10 @@ export interface ExampleInterface {
    * Some other description
    */
   bar?: number;
+  /**
+   * Some boolean
+   */
+  baz?: boolean;
 }
 
 /**
