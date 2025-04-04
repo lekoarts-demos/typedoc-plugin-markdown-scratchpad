@@ -1,4 +1,4 @@
-> **useExample**(`initialState`): \{ `isLoaded`: `false`; `isSignedIn`: `undefined`; `orgRole`: `undefined`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `false`; `orgRole`: `null`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: `null`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: `string`; \}
+> **useExample**(`initialState`): \{ `isLoaded`: `boolean`; `isSignedIn`: `boolean`; `orgRole`: `string`; \}
 
 Defined in: [issues/tbd/src/index.ts:63](https://github.com/lekoarts-demos/typedoc-plugin-markdown-scratchpad/blob/main/issues/tbd/src/index.ts#L63)
 
@@ -12,4 +12,10 @@ Example description
 
 ## Returns
 
-\{ `isLoaded`: `false`; `isSignedIn`: `undefined`; `orgRole`: `undefined`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `false`; `orgRole`: `null`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: `null`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: `string`; \}
+\{ `isLoaded`: `boolean`; `isSignedIn`: `boolean`; `orgRole`: `string`; \}
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| `isLoaded` | `boolean` | A boolean that indicates whether Clerk has completed initialization. Initially `false`, becomes `true` once Clerk loads. |
+| `isSignedIn` | `boolean` | A boolean that indicates whether a user is currently signed in. |
+| `orgRole` | `string` | The current user's role in their active organization. |

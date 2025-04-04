@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.13.1",
-    "typedoc": "github:TypeStrong/typedoc#a4b022ee571028b181e1fc6b10914719ff686c4f",
+    "typedoc": "0.28.1",
     "typedoc-plugin-markdown": "4.6.1",
     "typescript": "^5.7.3"
   }
