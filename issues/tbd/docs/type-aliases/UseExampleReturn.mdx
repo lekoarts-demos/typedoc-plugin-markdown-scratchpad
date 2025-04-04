@@ -1,0 +1,37 @@
+> **UseExampleReturn** = \{ `isLoaded`: `false`; `isSignedIn`: `undefined`; `orgRole`: `undefined`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `false`; `orgRole`: `null`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: `null`; \} \| \{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: [`OrganizationCustomRoleKey`](../interfaces/OrganizationCustomRoleKey.mdx); \}
+
+Defined in: [issues/tbd/src/index.ts:29](https://github.com/lekoarts-demos/typedoc-plugin-markdown-scratchpad/blob/main/issues/tbd/src/index.ts#L29)
+
+## Type declaration
+
+\{ `isLoaded`: `false`; `isSignedIn`: `undefined`; `orgRole`: `undefined`; \}
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| `isLoaded` | `false` | A boolean that indicates whether Clerk has completed initialization. Initially `false`, becomes `true` once Clerk loads. |
+| `isSignedIn` | `undefined` | A boolean that indicates whether a user is currently signed in. |
+| `orgRole` | `undefined` | The current user's role in their active organization. |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `false`; `orgRole`: `null`; \}
+
+| Name | Type |
+| ------ | ------ |
+| `isLoaded` | `true` |
+| `isSignedIn` | `false` |
+| `orgRole` | `null` |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: `null`; \}
+
+| Name | Type |
+| ------ | ------ |
+| `isLoaded` | `true` |
+| `isSignedIn` | `true` |
+| `orgRole` | `null` |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `true`; `orgRole`: [`OrganizationCustomRoleKey`](../interfaces/OrganizationCustomRoleKey.mdx); \}
+
+| Name | Type |
+| ------ | ------ |
+| `isLoaded` | `true` |
+| `isSignedIn` | `true` |
+| `orgRole` | [`OrganizationCustomRoleKey`](../interfaces/OrganizationCustomRoleKey.mdx) |

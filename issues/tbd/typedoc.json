@@ -7,7 +7,6 @@
   "hidePageHeader": true,
   "hideBreadcrumbs": true,
   "hidePageTitle": true,
-  "disableSources": true,
   "parametersFormat": "table",
   "interfacePropertiesFormat": "table",
   "classPropertiesFormat": "table",
@@ -16,4 +15,11 @@
   "typeDeclarationFormat": "table",
   "typeDeclarationVisibility": "compact",
   "typeAliasPropertiesFormat": "table",
+  "useHTMLAnchors": false,
+  "tableColumnSettings": {
+    "hideSources": true,
+  },
+  "fileExtension": ".mdx",
+  "excludeScopesInPaths": true,
+  "expandObjects": true,
 }

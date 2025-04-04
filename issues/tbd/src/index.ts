@@ -1,64 +1,67 @@
-/**
- * Foobar
- */
-export type Stuff<T> = T & {
-  /**
-   * If `true`, the previous data will be kept in the cache until new data is fetched. Defaults to `false`.
-   */
-  keepPreviousData?: boolean;
-};
-
-/**
- * Example of an interface with optional stuff
- */
-export interface ExampleInterface {
-  /**
-   * Some description
-   */
-  foo?: string;
-  /**
-   * Some other description
-   */
-  bar?: number;
-  /**
-   * Some boolean
-   */
-  baz?: boolean;
+interface Base {
+  permission: string;
+  role: string;
 }
 
-/**
- * @inline
- */
-export type Params = {
-  initialState?: Record<string, any>;
+interface Placeholder {
+  permission: unknown;
+  role: unknown;
+}
+
+declare global {
+  interface ClerkAuthorization {}
 }
 
 /**
  * Some description
+ *
+ * @interface
+ */
+export type OrganizationCustomRoleKey = ClerkAuthorization extends Placeholder
+  ? ClerkAuthorization['role'] extends string
+    ? ClerkAuthorization['role']
+    : Base['role']
+  : Base['role'];
+
+/**
  * @inline
  */
-export type Return<T extends string = 'example'> = {
+export type UseExampleReturn = 
+| {
   /**
-   * Some text
+   * A boolean that indicates whether Clerk has completed initialization. Initially `false`, becomes `true` once Clerk loads.
    */
-  isLoaded: boolean;
+  isLoaded: false;
   /**
-   * Some other text
+   * A boolean that indicates whether a user is currently signed in.
    */
-  user?: Record<string, any>;
+  isSignedIn: undefined;
   /**
-   * Other return value
+   * The current user's role in their active organization.
    */
-  data?: T;
+  orgRole: undefined;
 }
+| {
+  isLoaded: true;
+  isSignedIn: false;
+  orgRole: null;
+}
+| {
+  isLoaded: true;
+  isSignedIn: true;
+  orgRole: null;
+}
+| {
+  isLoaded: true;
+  isSignedIn: true;
+  orgRole: OrganizationCustomRoleKey;
+};
 
 /**
  * Example description
  */
-export function useExample(params: Params): Return {
-  return {
-    isLoaded: true,
-    user: params.initialState,
-    data: 'example',
-  }
+export function useExample(initialState: any = {}): UseExampleReturn {
+  // Example implementation
+  const state = { ...initialState }
+  return state
 }
